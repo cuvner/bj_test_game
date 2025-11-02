@@ -58,7 +58,7 @@ mentioned above.
 For quick experiments you can play a single round between two named players by
 using the helper function `blackjack.play_single_game`. Pass each player's name
 and strategy instance, and the function will return the final hand totals for
-the players and the dealer.
+the players and the bank (dealer).
 
 ```python
 from blackjack import play_single_game
@@ -66,7 +66,7 @@ from blackjack.strategies import DealerStrategy, SimpleStrategy
 
 totals = play_single_game(("Alice", SimpleStrategy()), ("Bob", DealerStrategy()))
 print(totals)
-# Example output: {'Alice': 19, 'Bob': 21, 'Dealer': 20}
+# Example output: {'Alice': 19, 'Bob': 21, 'Bank': 20}
 ```
 
 You can override the bet amount, bankroll, number of decks, and whether the

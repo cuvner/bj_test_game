@@ -273,7 +273,7 @@ def play_single_game(
     Dict[str, int]
         Mapping of participant names to their final hand totals after the
         round. The returned dictionary always contains entries for each
-        player and the dealer.
+        player and the bank (dealer).
     """
 
     name_one, strategy_one = player_one
@@ -301,5 +301,5 @@ def play_single_game(
     if name_two not in totals:
         totals[name_two] = 0
 
-    totals["Dealer"] = dealer_total
+    totals["Bank"] = dealer_total
     return totals
